@@ -26,7 +26,7 @@ requires = ["uv_build>=0.11.0,<0.12.0"]
 build-backend = "uv_build"
 
 [tool.uv.build-backend]
-module-name = "cs336_basics"
+module-name = ["tokenizer_lab_code", "transformer_lab_code", "training_lab_code", "generation_lab_code", "lab_tools"]
 module-root = ""
 
 [tool.uv]
@@ -37,6 +37,12 @@ python-preference = "managed"
 log_cli = true
 log_cli_level = "WARNING"
 addopts = "-s"
+markers = [
+    "lab_support: teacher-provided CPU-only tokenizer infrastructure",
+    "lab_a: student TODO A1-A4 (naive BPE)",
+    "lab_b: student TODO B1-B3 (incremental BPE)",
+    "lab_c: student TODO C1-C2 (shared tokenizer)",
+]
 
 [tool.ruff]
 line-length = 120

@@ -1,0 +1,37 @@
+{
+  "description": "M4 CPU 流程检查；词表大小从 demo manifest 自动读取，不用于研究结论。",
+  "model": {
+    "vocab_size": 0,
+    "context_length": 32,
+    "d_model": 64,
+    "num_layers": 2,
+    "num_heads": 4,
+    "d_ff": 192,
+    "rope_theta": 10000,
+    "use_rope": true,
+    "use_norm": true,
+    "ffn_type": "swiglu",
+    "tie_embeddings": false
+  },
+  "training": {
+    "batch_size": 4,
+    "gradient_accumulation": 1,
+    "total_steps": 40,
+    "schedule_steps": 40,
+    "max_lr": 0.001,
+    "min_lr": 0.0001,
+    "warmup_steps": 2,
+    "beta1": 0.9,
+    "beta2": 0.95,
+    "weight_decay": 0.01,
+    "eps": 1e-8,
+    "max_grad_norm": 1,
+    "eval_every": 10,
+    "eval_batches": 2,
+    "eval_batch_size": 4,
+    "eval_context_length": 32,
+    "save_every": 10,
+    "seed": 42,
+    "precision": "fp32"
+  }
+}

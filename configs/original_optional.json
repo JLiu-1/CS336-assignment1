@@ -1,0 +1,37 @@
+{
+  "description": "选做：原作业模型/训练 token 规模，327,680,000 tokens；必须先确认剩余课程配额。",
+  "model": {
+    "vocab_size": 10000,
+    "context_length": 256,
+    "d_model": 512,
+    "num_layers": 4,
+    "num_heads": 16,
+    "d_ff": 1344,
+    "rope_theta": 10000,
+    "use_rope": true,
+    "use_norm": true,
+    "ffn_type": "swiglu",
+    "tie_embeddings": false
+  },
+  "training": {
+    "batch_size": 8,
+    "gradient_accumulation": 4,
+    "total_steps": 40000,
+    "schedule_steps": 40000,
+    "max_lr": 0.001,
+    "min_lr": 0.0001,
+    "warmup_steps": 800,
+    "beta1": 0.9,
+    "beta2": 0.95,
+    "weight_decay": 0.01,
+    "eps": 1e-8,
+    "max_grad_norm": 1,
+    "eval_every": 500,
+    "eval_batches": 64,
+    "eval_batch_size": 8,
+    "eval_context_length": 256,
+    "save_every": 500,
+    "seed": 42,
+    "precision": "fp32"
+  }
+}

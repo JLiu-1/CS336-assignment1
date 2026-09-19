@@ -1,0 +1,37 @@
+{
+  "description": "M5 基线：40,960,000 tokens。基线和改动方案统一预算，按发布的配额缩放。",
+  "model": {
+    "vocab_size": 10000,
+    "context_length": 256,
+    "d_model": 256,
+    "num_layers": 4,
+    "num_heads": 8,
+    "d_ff": 704,
+    "rope_theta": 10000,
+    "use_rope": true,
+    "use_norm": true,
+    "ffn_type": "swiglu",
+    "tie_embeddings": false
+  },
+  "training": {
+    "batch_size": 8,
+    "gradient_accumulation": 4,
+    "total_steps": 5000,
+    "schedule_steps": 5000,
+    "max_lr": 0.001,
+    "min_lr": 0.0001,
+    "warmup_steps": 100,
+    "beta1": 0.9,
+    "beta2": 0.95,
+    "weight_decay": 0.01,
+    "eps": 1e-8,
+    "max_grad_norm": 1,
+    "eval_every": 100,
+    "eval_batches": 64,
+    "eval_batch_size": 8,
+    "eval_context_length": 256,
+    "save_every": 100,
+    "seed": 42,
+    "precision": "fp32"
+  }
+}

@@ -1,0 +1,32 @@
+{
+  "milestone": 5,
+  "members": [
+    "填写成员1学号",
+    "填写成员2学号",
+    "填写成员3学号"
+  ],
+  "contributions": {
+    "填写成员1学号": "填写具体实现、实验及复核贡献",
+    "填写成员2学号": "填写具体实现、实验及复核贡献",
+    "填写成员3学号": "填写具体实现、实验及复核贡献"
+  },
+  "report": "report.md",
+  "curve": "curve.svg",
+  "comparison": "tokens",
+  "hypothesis": "填写优化动机、预期影响和控制变量",
+  "budget_explanation": "按相同训练 token 预算比较；填写具体规模与选择原因",
+  "runs": [
+    {
+      "role": "baseline",
+      "path": "../m5_baseline"
+    },
+    {
+      "role": "candidate",
+      "path": "../m5_candidate"
+    }
+  ],
+  "samples": [
+    "../m5_baseline_sample.json",
+    "../m5_candidate_sample.json"
+  ]
+}

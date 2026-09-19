@@ -1,0 +1,25 @@
+{
+  "milestone": 4,
+  "members": [
+    "填写成员1学号",
+    "填写成员2学号",
+    "填写成员3学号"
+  ],
+  "contributions": {
+    "填写成员1学号": "填写具体实现、实验及复核贡献",
+    "填写成员2学号": "填写具体实现、实验及复核贡献",
+    "填写成员3学号": "填写具体实现、实验及复核贡献"
+  },
+  "report": "report.md",
+  "curve": "curve.svg",
+  "runs": [
+    {
+      "role": "pilot",
+      "path": "../m4_pilot"
+    }
+  ],
+  "verification": "../m4_checks/verification.json",
+  "samples": [
+    "../m4_sample.json"
+  ]
+}
